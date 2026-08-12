@@ -1,0 +1,129 @@
+/* CCS variables*/
+:root {
+  --body-txt: calc(0.75rem + 1vmin);
+  --title-txt: calc(1.2rem + 1vmin);
+  --backgound-color: hsl(47, 88%, 63%);
+  --background-section: hsl(0, 0%, 100%);
+  --txt-heading: hsl(0, 0%, 7%);
+  --txt-body: hsl(0, 0%, 42%);
+  --txt-font: "Figtree", arial, helvetica, sans-serif;
+}
+
+/* algemene styling */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--backgound-color);
+  font-family: var(--txt-font);
+}
+
+.tag span {
+  background-color: var(--backgound-color);
+  font-weight: 800;
+  padding: 7px 10px;
+  border-radius: 6px;
+}
+footer {
+  display: flex;
+  max-width: 75vw;
+  flex-direction: column;
+  background-color: var(--background-section);
+  box-shadow: 10px 10px;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 35px auto;
+  font-weight: 500;
+}
+
+footer p {
+  text-align: center;
+}
+/* card container */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: var(--background-section);
+  border-radius: 20px;
+  border: 1px solid var(--txt-body);
+  box-shadow: 10px 10px;
+}
+.img-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 15px;
+}
+
+.img-flex > img {
+  width: 95%;
+  border-radius: 13px;
+}
+.title {
+  font-size: var(--title-txt);
+  word-break: break-all;
+  padding-left: 13px;
+}
+
+.title:hover {
+  color: var(--backgound-color);
+  cursor: pointer;
+}
+
+.tag,
+.date-tag,
+.txt {
+  padding-left: 13px;
+}
+.txt {
+  color: var(--txt-body);
+  padding: 10px 12px;
+}
+
+.profiel {
+  display: flex;
+  font-weight: 800;
+}
+.profiel p {
+  padding-top: 10px;
+}
+.profiel img {
+  width: 50px;
+  padding: 10px 15px;
+}
+
+.date-tag {
+  font-weight: 500;
+}
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    word-wrap: break-word;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    top: 20px;
+  }
+  h1 span {
+    display: inline-block;
+    word-break: break-all;
+  }
+  .profiel {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+  }
+  .txt {
+    word-wrap: break-word;
+  }
+}
